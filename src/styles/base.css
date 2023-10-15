@@ -8,3 +8,120 @@
   font-stretch: 75% 125%;
   src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
 }
+
+
+
+.btn {
+  line-height: 1.8rem;
+  border-radius: 9.5px;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  position: relative;
+  background-color: #18181b;
+  color: #f4f4f5;
+  transition: background-color 0.2s ease-in-out;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer; /* Not included according to website */
+}
+
+.btn:hover {
+  background-color: #0c0c0d;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    rgb(0, 220, 130),
+    rgb(54, 228, 218),
+    rgb(22, 167, 158)
+  );
+  inset: -2px;
+  z-index: -1;
+  border-radius: 12.5px;
+  transition: all 0.2s ease 0s;
+}
+
+.btn:hover:before {
+  box-shadow: rgba(0, 220, 130, 0.5) 0px 0px 10px 0px,
+    rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
+}
+
+.btn > span {
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+}
+
+
+.animated-border {
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 0;
+  height: 100%;
+  background: conic-gradient(
+    transparent 50deg,
+    #ff4874 80deg,
+    transparent 100deg
+  );
+  filter: blur(8px);
+  border-radius: 16px;
+  transform-origin: center;
+  animation: border-animation -0.64s linear 4s infinite;
+  will-change: transform;
+}
+
+.wrapper {
+  margin-top: 32px;
+  padding: 4px;
+  position: relative;
+  margin-top: 128px;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(22, 4, 8, 0.5), rgba(22, 4, 8, 0.5)),
+    linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+  border-radius: 16px;
+  box-shadow: 0 0 27px rgba(173, 40, 40, 0.48);
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(22, 4, 8, 0.96), rgba(22, 4, 8, 0.96)),
+    linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  height: 139px;
+}
+
+@keyframes border-animation {
+  0% {
+    transform: translateY(-25%) translateX(40%) rotate(0deg);
+  }
+
+  30% {
+    transform: translateY(0) translateX(0) rotate(90deg) scaleX(0.7);
+  }
+
+  50% {
+    transform: translateY(-25%) translateX(-40%) rotate(180deg);
+  }
+
+  70% {
+    transform: translateY(0) translateX(0) rotate(270deg) scaleX(0.7);
+  }
+
+  to {
+    transform: translateY(-25%) translateX(40%) rotate(1turn);
+  }
+}

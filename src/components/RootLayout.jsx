@@ -14,9 +14,10 @@ import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
+// import { ButtonCustom } from '@/components/ButtonCustom'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
+import { GridPattern } from '@/components/GridPattern.old'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
@@ -169,6 +170,7 @@ function RootLayoutInner({ children }) {
           inert={expanded ? '' : undefined}
         >
           <Header
+            invert
             panelId={panelId}
             icon={MenuIcon}
             toggleRef={openRef}
@@ -237,6 +239,7 @@ function RootLayoutInner({ children }) {
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-neutral-950 pt-14"
       >
+        
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"

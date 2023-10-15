@@ -3,67 +3,87 @@ import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
+import { GridPattern } from '@/components/GridPattern'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
+
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
+import logoNext from '@/images/partners/9.png'
+import logoReact from '@/images/partners/7.png'
+import logoFlutter from '@/images/partners/3.png'
+import logoGithub from '@/images/partners/8.png'
+import logoSQL from '@/images/partners/13.png'
+import logoNode from '@/images/partners/6.png'
+import logoAzure from '@/images/partners/10.png'
+import logoAWS from '@/images/partners/4.png'
+import logoDj from '@/images/partners/15.png'
+import logoPyt from '@/images/partners/16.png'
+import logoTF from '@/images/partners/17.png'
+import logoExpress from '@/images/partners/14.png'
+import logoLaravel from '@/images/partners/1.png'
+
+
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['ReactJS', logoReact],
+  ['NextJS', logoNext],
+  ['ExpressJS', logoExpress],
+  ['NodeJS', logoNode],
+  ['Django', logoDj],
+  ['Laravel', logoLaravel],
+  ['TensorFlow', logoTF],
+  ['PyTorch', logoPyt],
+  ['Flutter', logoFlutter],
+  ['Azure', logoAzure],
+  ['AWS Cloud', logoAWS],
+  ['Github', logoGithub],
 ]
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-16  py-20 sm:mt-30 sm:py-32 lg:mt-48  backdrop-blur-sm">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+          <h2 className="text-center font-display text-md font-medium tracking-wider text-white sm:text-left [text-wrap:balance]">
+            Empowering Innovation Through Cutting-Edge Technologies
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-neutral-300" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4 ml-8 sm:ml-0"
           >
             {clients.map(([client, logo]) => (
               <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                <FadeIn className="flex items-center">
+                  <Image src={logo} alt={client} unoptimized width="30" />
+                  <h2 className="font-display  ml-3 font-medium tracking-wider text-white text-left text-sm sm:text-base">
+                    {client}
+                </h2>
                 </FadeIn>
               </li>
             ))}
           </ul>
         </FadeInStagger>
       </Container>
+
     </div>
   )
 }
+
 
 function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
+        invert
         title="Harnessing technology for a brighter future"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
@@ -175,6 +195,7 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
+        
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem] w-full">
           <svg
             className="relative -z-10 h-[21.1875rem] max-w-none rotate-[30deg] sm:h-[42.375rem]"
@@ -194,40 +215,12 @@ export default async function Home() {
                 y2="474.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#9089FC" />
-                <stop offset={1} stopColor="#FF80B5" />
+                <stop stopColor="#4F46E5" />
+                <stop offset={1} stopColor="#80CAFF" />
               </linearGradient>
             </defs>
           </svg>
-        </div>
-
-
-        {/* grid start */}
-      <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc"
-            width={200}
-            height={200}
-            x="50%"
-            y={-1}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M.5 200V.5H200" fill="none" />
-          </pattern>
-        </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-gray-800/20">
-          <path
-            d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-            strokeWidth={0}
-          />
-        </svg>
-        <rect width="100%" height="100%" strokeWidth={0} fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
-      </svg>
-      <svg
+          <svg
         viewBox="0 0 1108 632"
         aria-hidden="true"
         className="absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
@@ -251,11 +244,31 @@ export default async function Home() {
           </linearGradient>
         </defs>
       </svg>
+      </div>
+
+
+<GridPattern />
+     
+
+
         <FadeIn className="max-w-3xl">
+          <div className="mb-8 sm:flex">
+            <div className="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20 flex justify-center  items-center">
+            <span class="relative flex h-3 w-3 justify-center mr-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+              Studio our next round of funding.{' '}
+              <a href="#" className="font-semibold text-white ">
+                <span className="absolute inset-0" aria-hidden="true" />
+                Read more <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-50 [text-wrap:balance] sm:text-7xl">
-            Ward winning developer studio based in Denmark.
+            Xeleron. winning developer studio based in Denmark.
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-neutral-300">
             We are developer studio working at the intersection of design and
             technology. It’s a really busy intersection though — a lot of our
             staff have been involved in hit and runs.
@@ -266,6 +279,47 @@ export default async function Home() {
 
       <Clients />
 
+
+      <div className='flex'>
+      <div className="mx-auto max-w-7xl ">
+          <div className="relative isolate overflow-hidden backdrop-blur-sm bg-gray-800/30 px-6 pt-8 shadow-2xl rounded-3xl sm:px-8 md:pt-12 lg:gap-x-20 lg:px-12 lg:pt-0 ring-1 ring-white/10  hover:ring-white/20">
+            <svg
+              viewBox="0 0 1024 1024"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+              aria-hidden="true"
+            >
+              <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
+              <defs>
+                <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                <stop stopColor="#4F46E5" />
+                <stop offset={1} stopColor="#80CAFF" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-10 lg:text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Boost your productivity.
+                <br />
+                Start using our app today.
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+              </p>
+              
+            </div>
+            <div className="relative mt-16 h-80 lg:mt-8">
+              <img
+                className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10 "
+                src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                alt="App screenshot"
+                width={1824}
+                height={1080}
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
       <CaseStudies caseStudies={caseStudies} />
 
       <Testimonial
