@@ -99,8 +99,7 @@ function CaseStudies({ caseStudies }) {
             <FadeIn key={caseStudy.href} className="flex">
                      <div className="mx-auto max-w-7xl ">
         <div className='relative group'> 
-          <div className="absolute -inset-0 bg-gradient-to-r from-indigo-500 to-sky-600 rounded-3xl blur-none group-hover:blur-xl opacity-75 transition duration-1000 group-hover:duration-500"></div>
-
+         
           <div className="relative bg-gray-900 isolate overflow-hidden backdrop-blur-sm  px-6 pt-8 shadow-2xl rounded-3xl sm:px-8 md:pt-12 lg:gap-x-20 lg:px-12 lg:pt-0 ring-1 ring-white/10">
   
             <svg
