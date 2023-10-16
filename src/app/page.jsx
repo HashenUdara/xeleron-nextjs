@@ -94,37 +94,51 @@ function CaseStudies({ caseStudies }) {
         </p>
       </SectionIntro>
       <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time dateTime={caseStudy.year} className="font-semibold">
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
+                     <div className="mx-auto max-w-7xl ">
+        <div className='relative group'> 
+          <div className="absolute -inset-0 bg-gradient-to-r from-indigo-500 to-sky-600 rounded-3xl blur-none group-hover:blur-xl opacity-75 transition duration-1000 group-hover:duration-500 animate-tilt"></div>
+
+          <div className="relative bg-gray-900 isolate overflow-hidden backdrop-blur-sm  px-6 pt-8 shadow-2xl rounded-3xl sm:px-8 md:pt-12 lg:gap-x-20 lg:px-12 lg:pt-0 ring-1 ring-white/10">
+  
+            <svg
+              viewBox="0 0 1024 1024"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0 "
+              aria-hidden="true"
+            >
+              <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
+              <defs>
+                <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                <stop stopColor="#4F46E5" />
+                <stop offset={1} stopColor="#80CAFF" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-10 lg:text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Boost your productivity.
+                <br />
+                Start using our app today.
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+              </p>
+              
+            </div>
+            <div className="relative mt-16 h-80 lg:mt-8">
+              <img
+                className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10 "
+                src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                alt="App screenshot"
+                width={1824}
+                height={1080}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
             </FadeIn>
           ))}
         </FadeInStagger>
@@ -203,7 +217,7 @@ export default async function Home() {
           >
             <path
               fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-              fillOpacity=".2"
+              fillOpacity=".3"
               d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
             />
             <defs>
@@ -245,6 +259,7 @@ export default async function Home() {
         </defs>
       </svg>
       </div>
+      
 
 
 <GridPattern />
@@ -278,14 +293,16 @@ export default async function Home() {
 
 
       <Clients />
-
-
       <div className='flex'>
       <div className="mx-auto max-w-7xl ">
-          <div className="relative isolate overflow-hidden backdrop-blur-sm bg-gray-800/30 px-6 pt-8 shadow-2xl rounded-3xl sm:px-8 md:pt-12 lg:gap-x-20 lg:px-12 lg:pt-0 ring-1 ring-white/10  hover:ring-white/20">
+        <div className='relative group'> 
+          <div className="absolute -inset-0 bg-gradient-to-r from-indigo-500 to-sky-600 rounded-3xl blur-none group-hover:blur-xl opacity-75 transition duration-1000 group-hover:duration-500 animate-tilt"></div>
+
+          <div className="relative bg-gray-900 isolate overflow-hidden backdrop-blur-sm  px-6 pt-8 shadow-2xl rounded-3xl sm:px-8 md:pt-12 lg:gap-x-20 lg:px-12 lg:pt-0 ring-1 ring-white/10">
+  
             <svg
               viewBox="0 0 1024 1024"
-              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0 "
               aria-hidden="true"
             >
               <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
@@ -318,6 +335,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
+      </div>
         
       </div>
       <CaseStudies caseStudies={caseStudies} />
